@@ -7,7 +7,7 @@ from model import FacialExpressionModel
 
 
 # Loading the cascades
-face_cascade = cv2.CascadeClassifier('C:/Users/USER/Desktop/haar-cascade-files\haarcascade/haarcascade_frontalface_alt.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_frontalface_alt.xml')
 #eye_cascade = cv2.CascadeClassifier('Haarcascades/haarcascade_eye.xml')
 
 model = FacialExpressionModel("model.json", "model_weights.h5")
