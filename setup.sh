@@ -13,4 +13,4 @@ echo "\
 [general]\n\
 email = \"koushikahamed2@gmail.com.br\"\n\
 " > ~/.streamlit/credentials.toml
-© 2021 GitHub, Inc.
+
