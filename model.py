@@ -20,8 +20,8 @@ class FacialExpressionModel(object):
     def __init__(self, model_json_file, model_weights_file):
 
         # Now Let us load model from JSON file which we created during Training
-        model_json_file="C:/Users/USER/Desktop/haar-cascade-files/model.json"
-        model_weights_file="C:/Users/USER/Desktop/haar-cascade-files/model_weights.h5"
+        #model_json_file="C:/Users/USER/Desktop/haar-cascade-files/model.json"
+        #model_weights_file="C:/Users/USER/Desktop/haar-cascade-files/model_weights.h5"
         with open(model_json_file, "r") as json_file:
 
             # Reading the json file and storing it in loaded_model
