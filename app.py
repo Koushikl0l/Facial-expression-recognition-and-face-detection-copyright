@@ -70,15 +70,20 @@ def main():
 
         if image_file is not None:
             img = Image.open(image_file)
-            if st.button("Process"):
-                color_img=np.array(img.convert('RGB'))
-                gray_img = cv2.cvtColor(color_img, cv2.COLOR_BGR2GRAY)
-                result_img, result_faces ,roi_gray= detect(color_img,gray_img)
-                roi=cv2.resize(roi_gray,(48,48))
-                prediction = loaded_model.predict(roi[np.newaxis, :, :, np.newaxis])
-                Text=label_map[np.argmax(prediction[0])]
-                st.image(result_img, use_column_width = True)
-                st.success("Expression: {} ".format(Text))
+            #if st.button("Process"):
+	    color_img=np.array(img.convert('RGB'))
+	    gray_img = cv2.cvtColor(color_img, cv2.COLOR_BGR2GRAY)
+	    result_img, result_faces ,roi_gray= detect(color_img,gray_img)
+	    roi=cv2.resize(roi_gray,(48,48))
+	    prediction = loaded_model.predict(roi[np.newaxis, :, :, np.newaxis])
+	    Text=label_map[np.argmax(prediction[0])]
+	    #st.image(result_img, use_column_width = True)
+	    col1, col2 = st.beta_columns(2)
+	    col1.header("Original")
+            col1.image(img, use_column_width=True)
+	    col2.header("Detected Expression")
+            col2.image(result_img, use_column_width=True)
+	    st.success("Expression: {} ".format(Text))
     elif choice == "About":
     	about()
 
