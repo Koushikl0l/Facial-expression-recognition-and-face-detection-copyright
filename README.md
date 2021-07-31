@@ -1,9 +1,9 @@
 # Emotion-Recognition Web Application With Streamlit 
-A CNN based Tensorflow implementation on facial expression recognition (FER2013 dataset), achieving 66,72% accuracy 
+A CNN based Tensorflow implementation on facial expression recognition (FER2013 dataset), achieving 61,97% accuracy 
 ![](images/model.png)
 
 ### Dependencies:
-- python 3.7<br/>
+- python 3.9.6<br/>
 - Keras with TensorFlow as backend<br/>
 - Streamlit framework for web implementation
 
@@ -24,10 +24,7 @@ A CNN based Tensorflow implementation on facial expression recognition (FER2013 
 The separated dataset is already available to download in the two folders train and test.
 ### Run the project on your local:
 
-- Open Anaconda's command prompt on the project's directory.<br/>
-- Install virtual environment : `pip install virtualenv` </br>
-- Create virtual environment : `virutalenv venv` </br>
-- Activate the virtual environment : `source venv/bin/activate` </br>
+
 - Install dependencies in requirements.txt : `pip install -r requirements.txt`</br>
 - Install Streamlit : `pip install streamlit` <br/>
 - Run the app.py file : `streamlit run app.py"`
