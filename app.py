@@ -72,7 +72,7 @@ def main():
             img = Image.open(image_file)
             if st.button("Process"):
                 color_img=np.array(img.convert('RGB'))
-                gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                gray_img = cv2.cvtColor(color_img, cv2.COLOR_BGR2GRAY)
                 result_img, result_faces ,roi_gray= detect(color_img,gray_img)
                 roi=cv2.resize(roi_gray,(48,48))
                 prediction = loaded_model.predict(roi[np.newaxis, :, :, np.newaxis])
