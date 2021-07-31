@@ -67,8 +67,9 @@ def main():
 
         st.write("**Haarcascade classifier** for face detection ")
         st.write("**CNN** The model is the implementation of the paper Convolutional Neural Networks for Facial Expression Recognition")
-	st.write("**Input shape(48,48,1)**The data consists of 48x48 pixel grayscale images of faces")
-	st.write("**Expressions** (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral).")
+        st.write("**Input shape(48,48,1)**The data consists of 48x48 pixel grayscale images of faces")
+        st.write("**Expressions** (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral).")
+
     activities = ["Home", "About"]
     choice = st.sidebar.selectbox("Pick something fun", activities)
     if choice == "Home":
