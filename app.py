@@ -4,18 +4,18 @@ import numpy as np
 from PIL import Image
 import streamlit as st
 
-directory="C:/Users/USER/Desktop/deploy_fr/"
-face_cascade = cv2.CascadeClassifier(directory+'haarcascade_frontalface_alt.xml')
+#directory="C:/Users/USER/Desktop/deploy_fr/"
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
 label_map = ['Anger', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
 
 # load json and create model
-json_file = open(directory+'model.json', 'r')
+json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 # load weights into new model
-loaded_model.load_weights(directory+"model.h5")
+loaded_model.load_weights("model.h5")
 print("Loaded model from Kaggle server")
 
 def about():
