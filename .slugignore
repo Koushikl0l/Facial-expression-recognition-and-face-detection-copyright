@@ -5,6 +5,4 @@
 # The maximum allowed slug size (after compression) is 500 MB.
 
 *.json
-*.txt
-*.h5
 
