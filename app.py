@@ -60,6 +60,8 @@ def prediction(roi_gray):
 
 def main():
     st.title("Face Detection And Facial Expression recognition :sunglasses: ")
+    banner=Image.open("img3.jpg")
+    st.image(banner,use_column_width=None,width=780,)
     st.write("**Model:Haar cascade and Deep Neural Network**")
 
     activities = ["Home", "About"]
