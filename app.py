@@ -72,6 +72,9 @@ def main():
 
     activities = ["Home", "About"]
     choice = st.sidebar.selectbox("Pick something fun", activities)
+    sidebar_image=Image.open('face-detection.jpg')
+    st.sidebar.image(sidebar_image,use_column_width=True)
+    st.sidebar.info('© 2021 Copyright: Dev-k')
     if choice == "Home":
         st.write("Go to the About section from the sidebar to learn more about it.")
         image_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
